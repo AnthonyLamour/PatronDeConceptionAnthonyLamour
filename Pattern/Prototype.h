@@ -15,5 +15,8 @@ public:
 	virtual ~Prototype();
 	virtual void SetPrototypeColor(string newProtoypeColor);
 	virtual Prototype *Clone() const = 0;
+	virtual float GetNumero() const = 0;
+	string GetName();
+	string GetColor();
 
 };

@@ -11,8 +11,6 @@ public:
 	ProtoHerite1 *Clone() const override {
 		return new ProtoHerite1(*this);
 	}
-	string GetName();
-	string GetColor();
-	float GetNumero();
+	float GetNumero() const override;
 
 };

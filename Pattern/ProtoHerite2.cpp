@@ -10,17 +10,7 @@ ProtoHerite2::ProtoHerite2(string name, string color, float num)
 
 }
 
-string ProtoHerite2::GetName()
-{
-	return prototypeName;
-}
-
-string ProtoHerite2::GetColor()
-{
-	return prototypeColor;
-}
-
-float ProtoHerite2::GetNumero()
+float ProtoHerite2::GetNumero() const
 {
 	return numeroDeProtoHerite2;
 }

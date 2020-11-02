@@ -6,10 +6,14 @@
 #include"Prototype.h"
 #include"ProtoHerite1.h"
 #include"ProtoHerite2.h"
+#include"PrototypeFactory.h"
 #include <string>
 
 int main()
 {
+
+	std::cout << "Utilisation pattern de conception Prototype \n";
+
 	ProtoHerite1 ProtoHeriteTest1("ProtoHerite1Base", "red", 1);
 	ProtoHerite2 ProtoHeriteTest2("ProtoHerite2Base", "green", 2);
 
@@ -22,18 +26,18 @@ int main()
 	std::cout << "ProtoHeriteTest2 name : "<< ProtoHeriteTest2.GetName()<< " color : "<<ProtoHeriteTest2.GetColor()<< " numero : "<< ProtoHeriteTest2.GetNumero()<< "\n";
 	std::cout << "CloneProtoHerite2 name : " << CloneProtoHerite2.GetName()<< " color : "<< CloneProtoHerite2.GetColor()<< " numero : "<< CloneProtoHerite2.GetNumero()<< "\n";
 
+	std::cout << "Utilisation pattern de conception Fabrique \n";
+
+	PrototypeFactory *prototyprFactory = new PrototypeFactory();
+
+	Prototype *Proto1 = prototyprFactory->CreatePrototype(PrototypeFactory::PROTOTYPE_1);
+	Prototype *Proto2 = prototyprFactory->CreatePrototype(PrototypeFactory::PROTOTYPE_2);
+
+	std::cout << "Proto1 name : " << Proto1->GetName() << " color : " << Proto1->GetColor() << " numero : " << Proto1->GetNumero() << "\n";
+
+	std::cout << "Proto2 name : " << Proto2->GetName() << " color : " << Proto2->GetColor() << " numero : " << Proto2->GetNumero() << "\n";
+
 	std::cin;
 
 	return 0;
 }
-
-// Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
-// Déboguer le programme : F5 ou menu Déboguer > Démarrer le débogage
-
-// Conseils pour bien démarrer : 
-//   1. Utilisez la fenêtre Explorateur de solutions pour ajouter des fichiers et les gérer.
-//   2. Utilisez la fenêtre Team Explorer pour vous connecter au contrôle de code source.
-//   3. Utilisez la fenêtre Sortie pour voir la sortie de la génération et d'autres messages.
-//   4. Utilisez la fenêtre Liste d'erreurs pour voir les erreurs.
-//   5. Accédez à Projet > Ajouter un nouvel élément pour créer des fichiers de code, ou à Projet > Ajouter un élément existant pour ajouter des fichiers de code existants au projet.
-//   6. Pour rouvrir ce projet plus tard, accédez à Fichier > Ouvrir > Projet et sélectionnez le fichier .sln.

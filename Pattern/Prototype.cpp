@@ -22,3 +22,13 @@ void Prototype::SetPrototypeColor(string newProtoypeColor)
 {
 	prototypeColor = newProtoypeColor;
 }
+
+string Prototype::GetName()
+{
+	return prototypeName;
+}
+
+string Prototype::GetColor()
+{
+	return prototypeColor;
+}
